@@ -381,5 +381,96 @@
 "category":"Medicinal Leaves",
 "name_en":"Neem Leaves",
 "name_bn":"নিমপাতা",
-"
+"unit":"100 GM",
+"price":""
+},
+,
+{
+"id":70,
+"category":"Fresh Vegetables",
+"name_en":"Water Lily",
+"name_bn":"শাপলা",
+"unit":"1 KG",
+"price":""
+},
+{
+"id":71,
+"category":"Ready-to-Cook",
+"name_en":"Cut Water Lily",
+"name_bn":"কাটা শাপলা",
+"unit":"1 Packet",
+"price":""
+},
+{
+"id":72,
+"category":"Fresh Vegetables",
+"name_en":"Fig",
+"name_bn":"ডুমুর",
+"unit":"1 KG",
+"price":""
+},
+{
+"id":73,
+"category":"Ready-to-Cook",
+"name_en":"Cut Fig",
+"name_bn":"কাটা ডুমুর",
+"unit":"1 Packet",
+"price":""
+},
+{
+"id":74,
+"category":"Fresh Vegetables",
+"name_en":"Green Bell Pepper",
+"name_bn":"সবুজ সিমলা মরিচ",
+"unit":"1 KG",
+"price":""
+},
+{
+"id":75,
+"category":"Fresh Vegetables",
+"name_en":"Palm Fruit",
+"name_bn":"তাল",
+"unit":"1 PCS",
+"price":""
+},
+{
+"id":76,
+"category":"Ready-to-Cook",
+"name_en":"Palm Puree",
+"name_bn":"তালের পিউরি",
+"unit":"1 Packet",
+"price":""
+},
+{
+"id":77,
+"category":"Medicinal Leaves",
+"name_en":"Basak Leaves",
+"name_bn":"বাসক পাতা",
+"unit":"100 GM",
+"price":""
+},
+{
+"id":78,
+"category":"Medicinal Leaves",
+"name_en":"Kalmegh Leaves",
+"name_bn":"কালমেঘ পাতা",
+"unit":"100 GM",
+"price":""
+},
+{
+"id":79,
+"category":"Leaf & Greens",
+"name_en":"Red Spinach",
+"name_bn":"লাল শাক",
+"unit":"1 KG",
+"price":""
+},
+{
+"id":80,
+"category":"Ready-to-Cook",
+"name_en":"Cut Red Spinach",
+"name_bn":"কাটা লাল শাক",
+"unit":"1 Packet",
+"price":""
+}
   
