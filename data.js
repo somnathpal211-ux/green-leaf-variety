@@ -322,4 +322,331 @@ const products = [
   unit: "1 Packet",
   price: ""
 }
+  ,
+{
+  id: 41,
+  category: "Fresh Vegetables",
+  name_en: "Beetroot",
+  name_bn: "বিটরুট",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 42,
+  category: "Fresh Vegetables",
+  name_en: "Old Onion",
+  name_bn: "পুরোনো পেঁয়াজ",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 43,
+  category: "Fresh Vegetables",
+  name_en: "Indian Gooseberry",
+  name_bn: "আমলকি",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 44,
+  category: "Leaf & Greens",
+  name_en: "Lettuce",
+  name_bn: "লেটুস পাতা",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 45,
+  category: "Fresh Vegetables",
+  name_en: "Red Bell Pepper",
+  name_bn: "লাল সিমলা মরিচ",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 46,
+  category: "Fresh Vegetables",
+  name_en: "Yellow Bell Pepper",
+  name_bn: "হলুদ সিমলা মরিচ",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 47,
+  category: "Fresh Vegetables",
+  name_en: "Single Clove Garlic",
+  name_bn: "এক কোয়া রসুন",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 48,
+  category: "Leaf & Greens",
+  name_en: "Spring Onion",
+  name_bn: "স্প্রিং অনিয়ন",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 49,
+  category: "Fresh Vegetables",
+  name_en: "Desi Cucumber",
+  name_bn: "দেশি শসা",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 50,
+  category: "Fresh Vegetables",
+  name_en: "Chennai Pumpkin",
+  name_bn: "চেন্নাই কুমড়ো",
+  unit: "1 KG",
+  price: ""
+}
+  ,
+{
+  id: 51,
+  category: "Fresh Vegetables",
+  name_en: "Coconut",
+  name_bn: "নারকেল",
+  unit: "1 PCS",
+  price: ""
+},
+{
+  id: 52,
+  category: "Fresh Vegetables",
+  name_en: "Raw Mango",
+  name_bn: "কাঁচা আম",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 53,
+  category: "Fresh Vegetables",
+  name_en: "Jyoti Potato",
+  name_bn: "জ্যোতি আলু",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 54,
+  category: "Fresh Vegetables",
+  name_en: "Big Size Garlic",
+  name_bn: "বড় রসুন",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 55,
+  category: "Ready-to-Cook",
+  name_en: "Cut Shola Kochu",
+  name_bn: "কাটা শোলা কচু",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 56,
+  category: "Fresh Vegetables",
+  name_en: "White Gati Kochu",
+  name_bn: "সাদা গাঁটি কচু",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 57,
+  category: "Ready-to-Cook",
+  name_en: "Cut Kochur Saag",
+  name_bn: "কাটা কচুর শাক",
+  unit: "1 Packet",
+  price: ""
+},
+{
+  id: 58,
+  category: "Ready-to-Cook",
+  name_en: "Cut Cabbage",
+  name_bn: "কাটা বাঁধাকপি",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 59,
+  category: "Fresh Vegetables",
+  name_en: "Makra Brinjal",
+  name_bn: "মাকড়া বেগুন",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 60,
+  category: "Ready-to-Cook",
+  name_en: "Cut Banana Stem",
+  name_bn: "কাটা কলার থোর",
+  unit: "1 Packet",
+  price: ""
+}
+  ,
+{
+  id: 61,
+  category: "Leaf & Greens",
+  name_en: "Mint Leaves",
+  name_bn: "পুদিনা পাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 62,
+  category: "Leaf & Greens",
+  name_en: "Curry Leaves",
+  name_bn: "কারি পাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 63,
+  category: "Leaf & Greens",
+  name_en: "Holy Basil",
+  name_bn: "তুলসি পাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 64,
+  category: "Medicinal Leaves",
+  name_en: "Thankuni Leaves",
+  name_bn: "থানকুনি পাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 65,
+  category: "Leaf & Greens",
+  name_en: "Brahmi Greens",
+  name_bn: "ব্রাহ্মী শাক",
+  unit: "100 GM",
+  price: ""
+},
+{
   
+,
+{
+  id: 66,
+  category: "Leaf & Greens",
+  name_en: "Helencha Greens",
+  name_bn: "হেলেঞ্চা শাক",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 67,
+  category: "Medicinal Leaves",
+  name_en: "Kulekhara Leaves",
+  name_bn: "কুলেখাড়া পাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 68,
+  category: "Medicinal Leaves",
+  name_en: "Khanman Leaves",
+  name_bn: "খানমান পাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 69,
+  category: "Medicinal Leaves",
+  name_en: "Neem Leaves",
+  name_bn: "নিমপাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 70,
+  category: "Leaf & Greens",
+  name_en: "Water Lily",
+  name_bn: "শাপলা",
+  unit: "1 KG",
+  price: ""
+}
+  ,
+{
+  id: 71,
+  category: "Ready-to-Cook",
+  name_en: "Cut Water Lily",
+  name_bn: "কাটা শাপলা",
+  unit: "1 Packet",
+  price: ""
+},
+{
+  id: 72,
+  category: "Fresh Vegetables",
+  name_en: "Fig",
+  name_bn: "ডুমুর",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 73,
+  category: "Ready-to-Cook",
+  name_en: "Cut Fig",
+  name_bn: "কাটা ডুমুর",
+  unit: "1 Packet",
+  price: ""
+},
+{
+  id: 74,
+  category: "Fresh Vegetables",
+  name_en: "Green Bell Pepper",
+  name_bn: "সবুজ সিমলা মরিচ",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 75,
+  category: "Fresh Vegetables",
+  name_en: "Palm Fruit",
+  name_bn: "তাল",
+  unit: "1 PCS",
+  price: ""
+}
+  ,
+{
+  id: 76,
+  category: "Ready-to-Cook",
+  name_en: "Palm Puree",
+  name_bn: "তালের পিউরি",
+  unit: "1 Packet",
+  price: ""
+},
+{
+  id: 77,
+  category: "Medicinal Leaves",
+  name_en: "Basak Leaves",
+  name_bn: "বাসক পাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 78,
+  category: "Medicinal Leaves",
+  name_en: "Kalmegh Leaves",
+  name_bn: "কালমেঘ পাতা",
+  unit: "100 GM",
+  price: ""
+},
+{
+  id: 79,
+  category: "Leaf & Greens",
+  name_en: "Red Spinach",
+  name_bn: "লাল শাক",
+  unit: "1 KG",
+  price: ""
+},
+{
+  id: 80,
+  category: "Ready-to-Cook",
+  name_en: "Cut Red Spinach",
+  name_bn: "কাটা লাল শাক",
+  unit: "1 Packet",
+  price: ""
+}
