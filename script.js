@@ -18,6 +18,12 @@ function showProducts(list) {
         <h3>${name}</h3>
         <p>${product.unit}</p>
         <p>৳ ${product.price || "--"}</p>
+
+        <a href="https://wa.me/918250266060?text=${encodeURIComponent("I want to order: " + name)}"
+           target="_blank"
+           class="order-btn">
+           🟢 Order on WhatsApp
+        </a>
       </div>
     `;
   });
@@ -44,4 +50,18 @@ enBtn.addEventListener("click", function () {
 bnBtn.addEventListener("click", function () {
   currentLanguage = "bn";
   showProducts(products);
-});
+});.order-btn{
+display:block;
+margin-top:12px;
+padding:10px;
+background:#25D366;
+color:#fff;
+text-align:center;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.order-btn:hover{
+background:#1ea952;
+}
