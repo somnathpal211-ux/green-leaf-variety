@@ -1,41 +1,69 @@
 let currentLanguage = "en";
+let cart = [];
 
 const productList = document.getElementById("product-list");
 const searchBox = document.getElementById("searchBox");
 const categoryFilter = document.getElementById("categoryFilter");
+const cartCount = document.getElementById("cartCount");
 const enBtn = document.getElementById("enBtn");
 const bnBtn = document.getElementById("bnBtn");
 
+function updateCart() {
+  cartCount.innerText = cart.length;
+}
+
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+
+  if (product) {
+    cart.push(product);
+    updateCart();
+
+    alert(product.name_en + " added to cart");
+  }
+}
+
 function showProducts(list) {
+
   productList.innerHTML = "";
 
   list.forEach(product => {
 
     const name =
       currentLanguage === "bn"
-        ? product.name_bn
-        : product.name_en;
+      ? product.name_bn
+      : product.name_en;
 
     productList.innerHTML += `
       <div class="product-card">
+
+        <img src="images/no-image.png" alt="${name}">
+
         <h3>${name}</h3>
 
         <p>${product.unit}</p>
 
-        <p>৳ ${product.price || "--"}</p>
+        <p>₹ ${product.price || "--"}</p>
+
+        <button
+          class="cart-btn"
+          onclick="addToCart(${product.id})">
+          🛒 Add To Cart
+        </button>
 
         <a
           class="order-btn"
           target="_blank"
           href="https://wa.me/918250266060?text=${encodeURIComponent("I want to order: " + name)}">
-          🟢 Order on WhatsApp
+          💬 WhatsApp Order
         </a>
 
       </div>
     `;
-  });
-}
 
+  });
+
+}
 function filterProducts() {
 
   const keyword = searchBox.value.toLowerCase();
@@ -49,7 +77,7 @@ function filterProducts() {
       product.name_bn.includes(keyword);
 
     const matchCategory =
-      category === "All Categories" ||
+      category === "all" ||
       product.category === category;
 
     return matchName && matchCategory;
@@ -61,6 +89,8 @@ function filterProducts() {
 }
 
 showProducts(products);
+
+updateCart();
 
 searchBox.addEventListener("input", filterProducts);
 
@@ -81,3 +111,42 @@ bnBtn.addEventListener("click", () => {
   filterProducts();
 
 });
+
+document.getElementById("cartButton").addEventListener("click", () => {
+
+  if(cart.length === 0){
+    alert("Your cart is empty.");
+    return;
+  }
+
+  let message = "🛒 Green Leaf Variety Order\n\n";
+
+  cart.forEach((item,index)=>{
+
+    message += `${index+1}. ${item.name_en}\n`;
+
+  });
+
+  message += "\nPlease confirm my order.";
+
+  window.open(
+    "https://wa.me/918250266060?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+
+});
+window.addEventListener("load", () => {
+  filterProducts();
+});
+
+function clearCart() {
+  cart = [];
+  updateCart();
+}
+
+function updateCart() {
+  if (cartCount) {
+    cartCount.innerText = cart.length;
+  }
+}
