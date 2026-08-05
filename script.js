@@ -1,4 +1,3 @@
-let products = [];
 let currentLanguage = "en";
 
 const productList = document.getElementById("product-list");
@@ -6,21 +5,12 @@ const searchBox = document.getElementById("searchBox");
 const enBtn = document.getElementById("enBtn");
 const bnBtn = document.getElementById("bnBtn");
 
-fetch("products.json")
-.then(response => response.json())
-.then(data => {
-  products = data;
-  showProducts(products);
-})
-.catch(error => console.log(error));
-
 function showProducts(list) {
   if (!productList) return;
 
   productList.innerHTML = "";
 
   list.forEach(product => {
-
     const name = currentLanguage === "bn"
       ? product.name_bn
       : product.name_en;
@@ -29,15 +19,16 @@ function showProducts(list) {
       <div class="product-card">
         <h3>${name}</h3>
         <p>${product.unit}</p>
-        <p>₹ ${product.price || "--"}</p>
+        <p>৳ ${product.price || "--"}</p>
       </div>
     `;
   });
 }
 
+showProducts(products);
+
 if (searchBox) {
   searchBox.addEventListener("input", function () {
-
     const keyword = this.value.toLowerCase();
 
     const filtered = products.filter(item =>
@@ -46,7 +37,6 @@ if (searchBox) {
     );
 
     showProducts(filtered);
-
   });
 }
 
