@@ -3,16 +3,11 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Green Leaf Variety</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -22,65 +17,114 @@
 
 <header class="hero">
 
+<div class="overlay">
+
+<img src="logo.png" class="logo" alt="Logo">
+
 <h1>🌿 Green Leaf Variety</h1>
 
-<p>Fresh Vegetables • Leaf • Mushroom • Ready To Cook</p>
+<p>Fresh • Organic • Healthy Vegetables</p>
+
+<div class="hero-buttons">
+
+<a href="tel:9002971643" class="call-btn">📞 Call</a>
+
+<a href="https://wa.me/918250266060" class="whatsapp-btn">💬 WhatsApp</a>
+
+</div>
+
+</div>
 
 </header>
 
-<section class="top-bar">
+<div class="cart-bar">
+
+🛒 Open Cart
+
+<span id="cartCount">0</span>
+
+</div>
+
+<section class="search-area">
 
 <input
 id="searchBox"
 type="text"
-placeholder="🔍 Search Products..."
->
+placeholder="🔍 Search Vegetables...">
 
 <select id="categoryFilter">
 
 <option value="all">🌿 All Categories</option>
 
-<option value="Fresh Vegetables">Fresh Vegetables</option>
+<option value="Leaf & Greens">🥬 Leaf & Greens</option>
 
-<option value="Leaf & Greens">Leaf & Greens</option>
+<option value="Fresh Vegetables">🥕 Fresh Vegetables</option>
 
-<option value="Ready-to-Cook">Ready To Cook</option>
+<option value="Mushroom">🍄 Mushroom</option>
 
-<option value="Mushroom">Mushroom</option>
+<option value="Ready-to-Cook">🔪 Ready To Cook</option>
 
-<option value="Medicinal Leaves">Medicinal Leaves</option>
+<option value="Medicinal Leaves">🌿 Medicinal Leaves</option>
 
 </select>
+
 <div class="language">
 
-<button id="enBtn">
-English
-</button>
+<button id="enBtn">English</button>
 
-<button id="bnBtn">
-বাংলা
-</button>
+<button id="bnBtn">বাংলা</button>
 
 </div>
 
 </section>
 
 <section id="product-list">
+</section>
+
+<section class="features">
+
+<div class="feature-card">
+🥬
+<h3>100% Fresh</h3>
+<p>Fresh vegetables every day.</p>
+</div>
+
+<div class="feature-card">
+🚚
+<h3>Easy Order</h3>
+<p>Order directly on WhatsApp.</p>
+</div>
+
+<div class="feature-card">
+💚
+<h3>Quality</h3>
+<p>Best quality at fair price.</p>
+</div>
 
 </section>
 
-<div id="cartButton">
+<footer>
 
-🛒 Cart
+<h2>🌿 Green Leaf Variety</h2>
 
-<span id="cartCount">0</span>
+<p>Fresh Vegetables • Leaf • Mushroom • Ready To Cook</p>
+
+<div class="contact">
+
+<p>📞 Call : +91 9002971643</p>
+
+<p>💬 WhatsApp : +91 8250266060</p>
 
 </div>
 
-<script src="data.js"></script>
+<p class="copyright">
+© 2026 Green Leaf Variety. All Rights Reserved.
+</p>
 
+</footer>
+
+<script src="data.js"></script>
 <script src="script.js"></script>
 
 </body>
-
 </html>
