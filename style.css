@@ -1,127 +1,41 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
 body{
-background:#f4fff3;
-color:#222;
+  background:#f4fff3;
+  color:#222;
 }
 
 .hero{
-background:linear-gradient(135deg,#0f9d58,#2ecc71);
-color:white;
-text-align:center;
-padding:60px 20px;
+  background:#2e7d32;
+  color:#fff;
+  text-align:center;
+  padding:40px 20px;
 }
 
-.hero h1{
-font-size:40px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:25px;
-}
-
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:white;
-color:#0f9d58;
-text-decoration:none;
-font-weight:bold;
-border-radius:30px;
-}
-
-.categories,
-#products{
-padding:40px 20px;
-}
-
-.grid,
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:20px;
-}
-
-.card,
-.product{
-background:white;
-border-radius:15px;
-padding:20px;
-text-align:center;
-box-shadow:0 8
-fetch("products.json")
-.then(response => response.json())
-.then(products => {
-
-const productList = document.getElementById("product-list");
-const searchBox = document.getElementById("searchBox");
-
-function showProducts(list){
-
-productList.innerHTML="";
-
-list.forEach(product=>{
-
-productList.innerHTML += `
-<div class="product-card">
-<h3>${product.name_en}</h3>
-<p>${product.name_bn}</p>
-<p>${product.unit}</p>
-<p>₹ ${product.price || "--"}</p>
-</div>
-`;
-
-});
-
-}
-
-showProducts(products);
-
-searchBox.addEventListener("input",function(){
-
-const keyword=this.value.toLowerCase();
-
-const filtered=products.filter(item=>
-
-item.name_en.toLowerCase().includes(keyword) ||
-
-item.name_bn.includes(keyword)
-
-);
-
-showProducts(filtered);
-
-});
-
-})
-.catch(error=>console.log(error));
 #product-list{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
   gap:15px;
-  margin-top:20px;
+  padding:20px;
 }
 
 .product-card{
   background:#fff;
-  border-radius:12px;
   padding:15px;
+  border-radius:10px;
   box-shadow:0 2px 8px rgba(0,0,0,.15);
-  text-align:center;
 }
 
 .product-card h3{
-  margin:0 0 10px;
   color:#2e7d32;
+  margin-bottom:8px;
 }
 
 .product-card p{
-  margin:5px 0;
+  margin:4px 0;
 }
