@@ -925,8 +925,6 @@ const products = [
   price: ""
 },
 {
-  ,
-{
   id: 115,
   category: "Leaf & Greens",
   name_en: "Pea Shoots",
