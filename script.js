@@ -30,7 +30,7 @@ searchBox.addEventListener("input", function () {
 
   const filtered = products.filter(product =>
     product.name_en.toLowerCase().includes(keyword) ||
-    product.name_bn.toLowerCase().includes(keyword)
+    product.name_bn.includes(keyword)
   );
 
   showProducts(filtered);
