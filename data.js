@@ -526,9 +526,6 @@ const products = [
   price: ""
 },
 {
-  
-,
-{
   id: 66,
   category: "Leaf & Greens",
   name_en: "Helencha Greens",
