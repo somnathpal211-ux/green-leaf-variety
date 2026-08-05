@@ -18,10 +18,9 @@ function showProducts(list) {
         <h3>${name}</h3>
         <p>${product.unit}</p>
         <p>৳ ${product.price || "--"}</p>
-
-        <a href="https://wa.me/918250266060?text=${encodeURIComponent("I want to order: " + name)}"
+        <a class="order-btn"
            target="_blank"
-           class="order-btn">
+           href="https://wa.me/918250266060?text=${encodeURIComponent("I want to order: " + name)}">
            🟢 Order on WhatsApp
         </a>
       </div>
@@ -31,37 +30,29 @@ function showProducts(list) {
 
 showProducts(products);
 
-searchBox.addEventListener("input", function () {
-  const keyword = this.value.toLowerCase();
+if (searchBox) {
+  searchBox.addEventListener("input", function () {
+    const keyword = this.value.toLowerCase();
 
-  const filtered = products.filter(product =>
-    product.name_en.toLowerCase().includes(keyword) ||
-    product.name_bn.includes(keyword)
-  );
+    const filtered = products.filter(product =>
+      product.name_en.toLowerCase().includes(keyword) ||
+      product.name_bn.includes(keyword)
+    );
 
-  showProducts(filtered);
-});
-
-enBtn.addEventListener("click", function () {
-  currentLanguage = "en";
-  showProducts(products);
-});
-
-bnBtn.addEventListener("click", function () {
-  currentLanguage = "bn";
-  showProducts(products);
-});.order-btn{
-display:block;
-margin-top:12px;
-padding:10px;
-background:#25D366;
-color:#fff;
-text-align:center;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
+    showProducts(filtered);
+  });
 }
 
-.order-btn:hover{
-background:#1ea952;
+if (enBtn) {
+  enBtn.addEventListener("click", function () {
+    currentLanguage = "en";
+    showProducts(products);
+  });
+}
+
+if (bnBtn) {
+  bnBtn.addEventListener("click", function () {
+    currentLanguage = "bn";
+    showProducts(products);
+  });
 }
