@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Green Leaf Variety</title>
@@ -12,7 +9,6 @@
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,27 +16,35 @@
 </head>
 
 <body>
+<!-- Hero Section -->
 
-<!-- Splash Screen -->
+<header class="hero">
 
-<section class="hero">
+<div class="hero-overlay"></div>
 
-<div class="overlay"></div>
+<div class="hero-content">
 
 <img src="images/logo.png" class="logo" alt="Green Leaf Variety">
 
-<h1>🌿 Green Leaf Variety</h1>
+<p class="since">SINCE 1987</p>
 
-<h2>SINCE 1987</h2>
+<h1>Green Leaf Variety</h1>
 
-<p>Fresh • Organic • Healthy</p>
+<p class="tagline">
+Fresh • Organic • Healthy
+</p>
+
+<p class="subtag">
+From Our Farm To Your Home
+</p>
 
 <button id="enterBtn">
 🌿 Enter Green Leaf
 </button>
 
-</section>
+</div>
 
+</header>
 <!-- Top Bar -->
 
 <header class="topbar">
@@ -69,114 +73,78 @@
 
 </header>
 
-<!-- Categories -->
-
-<section class="categories">
-
-<h2>Shop by Categories</h2>
-
-<div class="category-grid">
-<div class="category-card">
-<img src="images/categories/fresh.png" alt="">
-<h3>🥕 Fresh Vegetables</h3>
-<p>Farm fresh vegetables</p>
-</div>
-
-<div class="category-card">
-<img src="images/categories/leaf.png" alt="">
-<h3>🌿 Leaf & Greens</h3>
-<p>Fresh leafy vegetables</p>
-</div>
-
-<div class="category-card">
-<img src="images/categories/mushroom.png" alt="">
-<h3>🍄 Mushroom</h3>
-<p>Fresh mushrooms</p>
-</div>
-
-<div class="category-card">
-<img src="images/categories/ready.png" alt="">
-<h3>🔪 Ready To Cook</h3>
-<p>Ready to cook items</p>
-</div>
-
-<div class="category-card">
-<img src="images/categories/medicine.png" alt="">
-<h3>🌱 Medicinal Leaves</h3>
-<p>Healthy herbal leaves</p>
-</div>
-
-<div class="category-card">
-<img src="images/categories/branded.png" alt="">
-<h3>🛍️ Branded Products</h3>
-<p>Trusted branded grocery items</p>
-</div>
-
-</div>
-
-</section>
+<!-- Search -->
 
 <section class="search-section">
 
 <input
 id="searchBox"
 type="text"
-placeholder="🔍 Search products...">
-
-<select id="categoryFilter">
-
-<option value="all">All Categories</option>
-
-<option value="Fresh Vegetables">Fresh Vegetables</option>
-
-<option value="Leaf & Greens">Leaf & Greens</option>
-
-<option value="Mushroom">Mushroom</option>
-
-<option value="Ready-to-Cook">Ready To Cook</option>
-
-<option value="Medicinal Leaves">Medicinal Leaves</option>
-
-<option value="Branded Products">Branded Products</option>
-
-</select>
+placeholder="🔍 Search Products...">
 
 </section>
+<!-- Categories -->
 
-<section id="product-list">
-</section>
+<section class="categories">
 
-<section class="about-preview">
+<h2>🌿 Shop by Categories</h2>
 
-<h2>About Green Leaf Variety</h2>
+<div class="category-grid">
 
-<p>
+<div class="category-card">
+<img src="images/categories/fresh.png" alt="Fresh">
+<h3>🥕 Fresh Vegetables</h3>
+<p>Farm Fresh Everyday</p>
+</div>
 
-Serving fresh vegetables and quality products with trust and care.
+<div class="category-card">
+<img src="images/categories/leaf.png" alt="Leaf">
+<h3>🌿 Leaf & Greens</h3>
+<p>Healthy Leaf Collection</p>
+</div>
 
-</p>
+<div class="category-card">
+<img src="images/categories/mushroom.png" alt="Mushroom">
+<h3>🍄 Mushroom</h3>
+<p>Fresh Mushroom</p>
+</div>
 
-<div class="about-card">
+<div class="category-card">
+<img src="images/categories/ready.png" alt="Ready">
+<h3>🔪 Ready To Cook</h3>
+<p>Ready in Minutes</p>
+</div>
 
-<h3>Founder</h3>
+<div class="category-card">
+<img src="images/categories/medicine.png" alt="Medicinal">
+<h3>🌱 Medicinal Leaves</h3>
+<p>Natural & Healthy</p>
+</div>
 
-<h2>Sukumar Pal</h2>
-
-<p>
-
-Since <strong>1987</strong>, Green Leaf Variety has been committed to providing fresh vegetables, leafy greens, mushrooms, ready-to-cook items, and trusted branded products.
-
-</p>
-
-<a href="about.html" class="about-btn">
-
-Read More →
-
-</a>
+<div class="category-card">
+<img src="images/categories/branded.png" alt="Branded">
+<h3>🛍️ Branded Products</h3>
+<p>Trusted Quality</p>
+</div>
 
 </div>
 
 </section>
+<!-- Featured Products -->
+
+<section class="products">
+
+<h2>🥬 Today's Fresh Picks</h2>
+
+<div id="product-list" class="product-grid">
+
+<!-- Products will load from data.js -->
+
+</div>
+
+</section>
+
+<!-- Why Choose Us -->
 
 <section class="why-us">
 
@@ -186,25 +154,26 @@ Read More →
 
 <div class="why-card">
 🌿
-<h3>Farm Fresh</h3>
-<p>Fresh products every day.</p>
+<h3>100% Fresh</h3>
+<p>Fresh vegetables directly from farms.</p>
 </div>
 
 <div class="why-card">
-💚
-<h3>Trusted Since 1987</h3>
-<p>Serving customers with care.</p>
+🚜
+<h3>Farm to Home</h3>
+<p>Quality products with trusted service.</p>
 </div>
 
 <div class="why-card">
-🛒
-<h3>Easy Ordering</h3>
-<p>WhatsApp & Cart support.</p>
+💬
+<h3>Easy Order</h3>
+<p>Quick WhatsApp ordering.</p>
 </div>
 
 </div>
 
 </section>
+<!-- Footer -->
 
 <footer>
 
@@ -215,10 +184,14 @@ Read More →
 <p>Fresh • Organic • Healthy</p>
 
 <div class="footer-contact">
+
 <p>📞 8250266060</p>
 
 <p>💬 WhatsApp : 8250266060</p>
+
 </div>
+
+<p>Founder : Sukumar Pal</p>
 
 <p class="copyright">
 © 2026 Green Leaf Variety. All Rights Reserved.
@@ -227,9 +200,7 @@ Read More →
 </footer>
 
 <script src="data.js"></script>
-
 <script src="script.js"></script>
 
 </body>
-
 </html>
