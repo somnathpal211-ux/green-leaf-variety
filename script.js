@@ -6,33 +6,40 @@ const searchBox = document.getElementById("searchBox");
 const categoryFilter = document.getElementById("categoryFilter");
 const cartCount = document.getElementById("cartCount");
 const enterBtn = document.getElementById("enterBtn");
-function updateCart(){
+const cartButton = document.getElementById("cartButton");
+function updateCart() {
 
-  if(cartCount){
+  if (cartCount) {
     cartCount.innerText = cart.length;
   }
 
 }
 
-if(enterBtn){
+if (enterBtn) {
 
-  enterBtn.addEventListener("click",()=>{
+  enterBtn.addEventListener("click", () => {
 
-    document.querySelector(".categories").scrollIntoView({
-      behavior:"smooth"
-    });
+    const section = document.querySelector(".categories");
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
 
   });
 
 }
-function showProducts(list){
+function showProducts(list) {
 
-  productList.innerHTML="";
+  if (!productList) return;
 
-  list.forEach(product=>{
+  productList.innerHTML = "";
+
+  list.forEach(product => {
 
     const name =
-      currentLanguage==="bn"
+      currentLanguage === "bn"
       ? product.name_bn
       : product.name_en;
 
@@ -45,12 +52,12 @@ function showProducts(list){
 
         <p>${product.unit}</p>
 
-        <p>₹ ${product.price}</p>
+        <p>₹ ${product.price || "Price on Request"}</p>
 
         <a
           class="order-btn"
           target="_blank"
-          href="https://wa.me/918250266060?text=${encodeURIComponent("I want to order: "+name)}">
+          href="https://wa.me/918250266060?text=${encodeURIComponent("I want to order: " + name)}">
 
           💬 WhatsApp Order
 
@@ -62,21 +69,27 @@ function showProducts(list){
   });
 
 }
-function filterProducts(){
+function filterProducts() {
 
-  const keyword = searchBox.value.toLowerCase();
+  if (typeof products === "undefined") return;
 
-  const category = categoryFilter.value;
+  const keyword = searchBox
+    ? searchBox.value.toLowerCase()
+    : "";
 
-  const filtered = products.filter(product=>{
+  const category = categoryFilter
+    ? categoryFilter.value
+    : "all";
+
+  const filtered = products.filter(product => {
 
     const matchName =
       product.name_en.toLowerCase().includes(keyword) ||
       product.name_bn.includes(keyword);
 
     const matchCategory =
-      category==="all" ||
-      product.category===category;
+      category === "all" ||
+      product.category === category;
 
     return matchName && matchCategory;
 
@@ -85,35 +98,15 @@ function filterProducts(){
   showProducts(filtered);
 
 }
-showProducts(products);
 
-updateCart();
+if (searchBox) {
+  searchBox.addEventListener("input", filterProducts);
+}
 
-searchBox.addEventListener(
-  "input",
-  filterProducts
-);
-
-categoryFilter.addEventListener(
-  "change",
-  filterProducts
-);
-enBtn.addEventListener("click",()=>{
-
-  currentLanguage="en";
-
-  filterProducts();
-
-});
-
-bnBtn.addEventListener("click",()=>{
-
-  currentLanguage="bn";
-
-  filterProducts();
-
-});
-function addToCart(product){
+if (categoryFilter) {
+  categoryFilter.addEventListener("change", filterProducts);
+}
+function addToCart(product) {
 
   cart.push(product);
 
@@ -121,54 +114,51 @@ function addToCart(product){
 
 }
 
-document.addEventListener("click",(e)=>{
+document.addEventListener("click", (e) => {
 
-  if(e.target.classList.contains("add-cart")){
+  if (e.target.classList.contains("add-cart")) {
 
-    const id=Number(e.target.dataset.id);
+    const id = Number(e.target.dataset.id);
 
-    const product=products.find(p=>p.id===id);
+    const product = products.find(p => p.id === id);
 
-    if(product){
-
+    if (product) {
       addToCart(product);
-
     }
 
   }
 
 });
-document.getElementById("cartButton")
-.addEventListener("click",()=>{
 
-if(cart.length===0){
+if (cartButton) {
 
-alert("Cart is empty!");
+  cartButton.addEventListener("click", () => {
 
-return;
+    if (cart.length === 0) {
+      alert("Cart is empty!");
+      return;
+    }
+
+    let message = "🛒 Green Leaf Variety Order\n\n";
+
+    cart.forEach((item, i) => {
+      message += (i + 1) + ". " + item.name_en + "\n";
+    });
+
+    window.open(
+      "https://wa.me/918250266060?text=" + encodeURIComponent(message),
+      "_blank"
+    );
+
+  });
 
 }
+window.addEventListener("load", () => {
 
-let message="🛒 Green Leaf Variety Order%0A%0A";
+  updateCart();
 
-cart.forEach((item,i)=>{
-
-message += (i+1)+". "+item.name_en+"%0A";
-
-});
-
-window.open(
-"https://wa.me/918250266060?text="+message,
-"_blank"
-);
-
-});
-window.addEventListener("load",()=>{
-
-  if(typeof products!=="undefined"){
-
+  if (typeof products !== "undefined") {
     filterProducts();
-
   }
 
 });
