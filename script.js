@@ -39,7 +39,7 @@ function showProducts(list){
     productList.innerHTML += `
       <div class="product-card">
 
-        <img src="${product.image}" alt="${name}">
+        <img src="${product.image || 'images/products/no-image.jpg'}" alt="${name}">
 
         <h3>${name}</h3>
 
